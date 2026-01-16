@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Actividad de Snake con Preguntas</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>Actividad de Snake con Preguntas</h1>
+  <p class="instrucciones">Mueve la neurona (verde) hasta la sinapsis (azul) y responde las preguntas que aparezcan.</p>
+  <div class="panel">
+    <div class="marcadores">
+      <span>Sinapsis: <strong id="sinapsisCount">0</strong></span>
+      <span>Correctas: <strong id="correctCount">0</strong></span>
+      <span>Preguntas restantes: <strong id="leftCount">0</strong></span>
+    </div>
+    <div class="acciones">
+      <button id="startBtn">Iniciar</button>
+      <button id="endBtn">Finalizar</button>
+    </div>
+  </div>
+  <div id="game" tabindex="0" aria-label="Área de juego"></div>
+</div>
+
+<div id="modal" class="modal oculto" role="dialog" aria-modal="true">
+  <div class="modal-content">
+    <div id="questionText" class="pregunta"></div>
+    <div id="options" class="opciones"></div>
+  </div>
+  </div>
+
+<div id="finalModal" class="modal oculto" role="dialog" aria-modal="true">
+  <div class="modal-content">
+    <h2>Fin del juego</h2>
+    <div id="resumen"></div>
+    <div class="recomendaciones">
+      <h3>Recomendaciones sobre el sistema nervioso</h3>
+      <ul>
+        <li>Dormir bien.</li>
+        <li>Ejercicio moderado y regular.</li>
+        <li>Buena alimentación.</li>
+        <li>Evitar el estrés y sustancias como café, cigarrillo y alcohol.</li>
+      </ul>
+    </div>
+    <button id="closeFinal">Cerrar</button>
+  </div>
+</div>
+
+<div id="loseModal" class="modal oculto" role="dialog" aria-modal="true">
+  <div class="modal-content">
+    <h2>Perdiste</h2>
+    <p>Tocaste el borde. Se reinician las preguntas y pierdes el largo obtenido.</p>
+    <button id="loseContinue">Continuar</button>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
